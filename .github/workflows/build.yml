@@ -35,7 +35,7 @@ jobs:
         file build/Payload/DDOS.app/DDOS
     
     - name: Upload IPA
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: DDOS-IPA
         path: DDOS.ipa
