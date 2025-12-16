@@ -37,7 +37,7 @@ if command -v xcrun &> /dev/null; then
         -framework Foundation \
         -framework UserNotifications \
         -o "$APP_DIR/$APP_NAME" \
-        main.m DDOS.m DDOS.mm
+        main.m DDOS.m
     
     echo "✅ Compiled successfully!"
     
