@@ -1,0 +1,42 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+    
+    - name: Install ldid
+      run: |
+        brew install ldid
+    
+    - name: Build IPA
+      run: |
+        chmod +x build.sh
+        ./build.sh
+    
+    - name: Verify IPA
+      run: |
+        ls -lh DDOS.ipa
+        file build/Payload/DDOS.app/DDOS
+    
+    - name: Upload IPA
+      uses: actions/upload-artifact@v3
+      with:
+        name: DDOS-IPA
+        path: DDOS.ipa
+        retention-days: 30
