@@ -1,0 +1,9 @@
+Package: com.dothanh1110.ddos
+Name: DDOS
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: DDoS Agent for iOS (Educational Purpose Only)
+Maintainer: @dothanh1110
+Author: @dothanh1110
+Section: Tweaks
+Depends: mobilesubstrate
