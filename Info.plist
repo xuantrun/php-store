@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>7.0</string>
+	<string>13.0</string>
 	<key>SBAppTags</key>
 	<array>
 		<string>hidden</string>
