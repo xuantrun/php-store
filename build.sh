@@ -30,7 +30,7 @@ if command -v xcrun &> /dev/null; then
     
     clang -arch arm64 -arch arm64e \
         -isysroot $(xcrun --sdk iphoneos --show-sdk-path) \
-        -miphoneos-version-min=7.0 \
+        -miphoneos-version-min=13.0 \
         -fobjc-arc \
         -framework UIKit \
         -framework Foundation \
