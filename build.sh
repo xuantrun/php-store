@@ -32,6 +32,7 @@ if command -v xcrun &> /dev/null; then
         -isysroot $(xcrun --sdk iphoneos --show-sdk-path) \
         -miphoneos-version-min=13.0 \
         -fobjc-arc \
+        -lc++ \
         -framework UIKit \
         -framework Foundation \
         -framework UserNotifications \
